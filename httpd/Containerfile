@@ -1,5 +1,5 @@
-FROM registry.redhat.io/rhel8/httpd-2.4
+FROM docker.io/library/httpd
 
-RUN echo "This is Arun Lal" > /var/www/html/index.html
+RUN echo "This is Arun Lal" > /usr/local/apache2/htdocs/index.html
 
 CMD ["httpd", "-D", "FOREGROUND"]
