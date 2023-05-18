@@ -1,0 +1,5 @@
+FROM registry.redhat.io/rhel8/httpd-2.4
+
+RUN echo "This is Arun Lal" > /var/www/html/index.html
+
+CMD ["httpd", "-D", "FOREGROUND"]
