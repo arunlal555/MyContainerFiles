@@ -1,0 +1,5 @@
+FROM registry.redhat.io/ubi7/python-36
+
+RUN echo "This is Arun Lal" > /app/message.txt
+
+CMD ["python", "-m", "http.server", "8080"]
