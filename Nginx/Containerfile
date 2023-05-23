@@ -1,9 +1,6 @@
 # Use the official Nginx base image
 FROM nginx:latest
 
-# Copy custom Nginx configuration file
-COPY nginx.conf /etc/nginx/nginx.conf
-
 # Replace the default index.html with a custom file
 RUN echo "This is Arun" > /usr/share/nginx/html/index.html
 
