@@ -1,0 +1,10 @@
+FROM docker.io/ubuntu
+
+RUN apt-get update && apt-get install -y poppler-utils
+
+COPY pdf-converter.sh /app/pdf-converter.sh
+RUN chmod +x /app/pdf-converter.sh
+
+WORKDIR /app
+
+CMD ["/app/pdf-converter.sh"]
